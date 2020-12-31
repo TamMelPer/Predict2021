@@ -20,6 +20,12 @@
     <% form.label :prediction %>
     <%= form.text_field :prediction, class:"form-control", placeholder:"Your unprecedented predictables for 2021. Make Mystic Meg proud!" %>
   </div>
+
+    <div class="field form-group">
+    <% form.label :user_id %>
+    <%= form.number_field :user_id, id: :prediction_user_id, class:"form-control", value:current_user.id, type: :hidden %>
+  </div>
+
 <br>
   <div class="actions">
     <%= form.submit class:"btn btn-warning" %>
