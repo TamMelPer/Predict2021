@@ -1,6 +1,7 @@
 class PredictionsController < ApplicationController
   before_action :set_prediction, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
   # GET /predictions
   # GET /predictions.json
   def index
@@ -14,7 +15,8 @@ class PredictionsController < ApplicationController
 
   # GET /predictions/new
   def new
-    @prediction = Prediction.new
+    # @prediction = Prediction.new
+    @prediction = current_user.predictions.build
   end
 
   # GET /predictions/1/edit
@@ -24,8 +26,8 @@ class PredictionsController < ApplicationController
   # POST /predictions
   # POST /predictions.json
   def create
-    @prediction = Prediction.new(prediction_params)
-
+    # @prediction = Prediction.new(prediction_params)
+    @prediction = current_user.predictions.build(prediction_params)
     respond_to do |format|
       if @prediction.save
         format.html { redirect_to @prediction, notice: 'Prediction was successfully created.' }
@@ -59,6 +61,11 @@ class PredictionsController < ApplicationController
       format.html { redirect_to predictions_url, notice: 'Prediction was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def correct_user
+    @prediction = current_user.predictions.find_by(id: params[:id])
+    redirect_to predictions_path, notice: "Not authorized - you did not make this prediction!" if @prediction.nil?
   end
 
   private

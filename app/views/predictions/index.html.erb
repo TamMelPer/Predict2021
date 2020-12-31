@@ -5,6 +5,7 @@
     <tr>
       <th>Name</th>
       <th>Prediction</th>
+      <th>User ID</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
       <tr>
         <td><%= prediction.name %></td>
         <td><%= prediction.prediction %></td>
+        <td><%= prediction.user_id %></td>
         <td><%= link_to 'Show', prediction %></td>
         <td><%= link_to 'Edit', edit_prediction_path(prediction) %></td>
         <td><%= link_to 'Destroy', prediction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
