@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field form-group">
+    <% form.label :name %>
+    <%= form.text_field :name, class:"form-control", placeholder:"Name so we can Shame" %>
   </div>
 
-  <div class="field">
-    <%= form.label :prediction %>
-    <%= form.text_field :prediction %>
+  <div class="field form-group">
+    <% form.label :prediction %>
+    <%= form.text_field :prediction, class:"form-control", placeholder:"Your unprecedented predictables for 2021. Make Mystic Meg proud!" %>
   </div>
-
+<br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-warning" %>
   </div>
 <% end %>
