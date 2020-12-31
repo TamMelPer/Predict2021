@@ -8,6 +8,8 @@ But then I thought, why give that to Facebook? Why not put some of my new softwa
 
 So, here it is - My very first webpage! Yes, it is super simple and the design could use some work but I'm only at the start of my web development journey. I've learned quite a lot about Ruby on Rails, the MVC model and bootstrap. And, it'll be nice to look back at this at the end of the year and see how far I've come.
 
+Next, I'd like to add a button that will display a meme on 2020 as it will give me additional practice on APIs. And,some more styling would be nice too. 
+
 Each commit message explains the steps I took when building this website and hopefully it'll be useful if you'd like to follow along and create your own. These are some of the resources I found really helpful:
 - The [Odin Project Intro](https://www.theodinproject.com/courses/ruby-on-rails/lessons/your-first-rails-application-ruby-on-rails) has a great intro' to rails. My repo is [here](https://github.com/TamMelPer/my_first_rails_app)
 - [This](https://github.com/CodeZeus-dev/framework-tutorials) great fundamentals cheatsheet put together by my friend Constantine. 
@@ -15,4 +17,6 @@ Each commit message explains the steps I took when building this website and hop
 - A fun [video tutorial](https://www.youtube.com/watch?v=B3Fbujmgo60&t=5719s) to build a food log.
 - The 'Learn Ruby on Rails' course in Codecademy. 
 
-I will now be attempting to deploy to Heroku.
+I have deployed to Heroku so please visit https://predict2021.herokuapp.com/ to see my friend's predictions and do add one or more of your own.
+
+HAPPY NEW YEAR 2021!
